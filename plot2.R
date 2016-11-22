@@ -6,4 +6,3 @@ sub <- subset(entire, Date == "2007-02-01" | Date == "2007-02-02")
 daywithtime <- paste(sub$Date,sub$Time)
 fixed_time <- strptime(daywithtime, format = "%Y-%m-%d %H:%M:%S",tz="")
 secondplot <- plot(fixed_time, sub[,3], sub= NULL, xlab= " ", ylab = "Global Active Power (kilowatts)", type = "l")
-
